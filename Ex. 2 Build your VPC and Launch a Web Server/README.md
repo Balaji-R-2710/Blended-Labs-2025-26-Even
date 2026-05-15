@@ -2,9 +2,10 @@
 
 ## Author
 
-* **Name:** BALAJI R
+* **Name**: BALAJI R
 * **Register Number**: 212224050004
-* **Date of Submission**: 14-05-2026
+* **Date of Submission**: 14/05/26
+
 ---
 
 ## Objective
@@ -84,33 +85,40 @@ Create a simple HTML page and verify that it can be accessed from a web browser 
 
 ## Workflow (Student Explanation)
 
-1. Created a VPC I went to the VPC dashboard in AWS and created a new VPC with the CIDR block 10.0.0.0/16. I gave it a meaningful name so I could easily identify it later.
-2. Created a Public Subnet Inside the VPC, I created a new subnet with the CIDR block 10.0.1.0/24. I enabled the option to auto-assign public IPv4 addresses so that any instance launched       in this subnet would automatically receive a public IP.
-3. Created and Attached an Internet Gateway I created a new Internet Gateway and attached it to my VPC. This allows resources inside the VPC to communicate with the internet.
-4. Configured Route Table I created a new route table and added a default route 0.0.0.0/0 pointing to the Internet Gateway. Then I associated this route table with the public subnet to         allow internet access.
-5. Created a Security Group I created a security group and added inbound rules to allow:
-    SSH (Port 22) for remote access
-    HTTP (Port 80) to allow web traffic
-6. Launched an EC2 Instance I launched a new EC2 instance using the Amazon Linux 2 AMI and selected the t2.micro instance type. I selected the public subnet, attached the security group I      created, and selected my key pair for SSH access.
-7. Configured the Web Server
+1. A Virtual Private Cloud (VPC) was designed and created with the CIDR block 10.0.0.0/16 to establish a secure and isolated network environment within AWS.  
+2. A public subnet was configured within the VPC with the CIDR range 10.0.1.0/24, and auto-assign public IPv4 addresses was enabled to allow internet connectivity for instances.  
+3. An Internet Gateway was created and attached to the VPC, followed by the setup of a route table with a default route (0.0.0.0/0) pointing to the gateway, and the route table was associated with the public subnet.  
+4. A security group was established to permit inbound SSH (port 22) and HTTP (port 80) traffic, and an EC2 instance was launched using the Amazon Linux 2 AMI, associated with the security group and a key pair.  
+5. The Apache HTTPD web server was installed and started on the EC2 instance, a simple HTML webpage was created, and its accessibility was verified through the public IP address of the instance via a web browser.
 
+---
 
 ## Output Screenshots (Attach 3)
 
 ### Screenshot 1: VPC and Subnet Details
 
-<img width="1920" height="1080" alt="Screenshot (181)" src="https://github.com/user-attachments/assets/c58a0824-c56c-4d47-9be2-3c3e7f12b8ca" />
+<img width="1823" height="946" alt="1 1" src="https://github.com/user-attachments/assets/599dd75f-d140-4ac7-8896-4ecd94bd0154" />
 
+
+
+
+---
 
 ### Screenshot 2: EC2 Instance Running
 
+<img width="1920" height="962" alt="1 2" src="https://github.com/user-attachments/assets/187441c3-3d2c-4b64-a383-53b2ae6b70d4" />
 
-<img width="1920" height="1080" alt="Screenshot (193)" src="https://github.com/user-attachments/assets/08e35bb5-0b2e-4864-be17-abeb2c6c55d0" />
+
+
+
+---
 
 ### Screenshot 3: Web Server Output in Browser
 
-<img width="1920" height="1080" alt="Screenshot (196)" src="https://github.com/user-attachments/assets/f7f7336c-ad96-48cc-aba5-63e8bac31623" />
+<img width="1920" height="962" alt="1 2" src="https://github.com/user-attachments/assets/ca3cbe82-ce37-46a7-b089-0563c395c3bf" />
 
+
+---
 
 ## Result 
 
